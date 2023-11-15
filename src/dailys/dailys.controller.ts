@@ -7,6 +7,11 @@ import { UpdateDailyDto } from './dto/update-daily.dto';
 export class DailysController {
   constructor(private readonly dailysService: DailysService) {}
 
+  @Post('update-all')
+  updateAll(@Body() updateAllDailyDto: any) {
+    return this.dailysService.updateAll(updateAllDailyDto);
+  }
+
   @Post()
   create(@Body() createDailyDto: CreateDailyDto) {
     return this.dailysService.create(createDailyDto);

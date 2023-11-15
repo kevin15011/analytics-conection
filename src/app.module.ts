@@ -6,6 +6,7 @@ import { ConfigModule } from '@nestjs/config';
 import { DailysModule } from './dailys/dailys.module';
 import { DimensionsModule } from './dimensions/dimensions.module';
 import { MetricsModule } from './metrics/metrics.module';
+import { AnalyticsModule } from './analytics/analytics.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { MetricsModule } from './metrics/metrics.module';
     DailysModule,
     DimensionsModule,
     MetricsModule,
+    AnalyticsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
